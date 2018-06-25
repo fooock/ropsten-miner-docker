@@ -29,4 +29,4 @@ start: build
 	--memory=$(MEMORY) --memory-swap=$(SWAP_MEMORY) --memory-swappiness=80 --oom-kill-disable \
 	--cpus=$(CPUS) \
 	-v $$HOME/ropsten-miner/data:/root/.ethereum ethereum/client-go \
-	ethereum/client-go --rpc --rpcaddr "0.0.0.0" --networkid 3 --mine --etherbase $(ETHER_ADDR)
+	ethereum/client-go --rpc --rpcaddr "0.0.0.0" --networkid 3 --testnet --mine --etherbase $(ETHER_ADDR) --fast
