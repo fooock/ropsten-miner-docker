@@ -20,6 +20,7 @@ CPUS = 2
 #                 |___/
 
 build:
+	-mkdir -p $$HOME/ropsten-miner/data
 	docker pull ethereum/client-go
 
 start: build
