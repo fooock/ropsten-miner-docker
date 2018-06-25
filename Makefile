@@ -24,7 +24,7 @@ build:
 
 start: build
 	docker run -it --name ropsten-miner \
-	-p 8545:8545 -p 30303:30303 \
+	-p 127.0.0.1:8545:8545 -p 30303:30303 \
 	--memory=$(MEMORY) --memory-swap=$(SWAP_MEMORY) --memory-swappiness=80 --oom-kill-disable \
 	--cpus=$(CPUS) \
 	-v $$HOME/ropsten-miner/data:/root/.ethereum ethereum/client-go \
