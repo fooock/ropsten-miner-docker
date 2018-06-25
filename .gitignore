@@ -1,0 +1,4 @@
+*.log
+.vagrant/
+build/
+out/
