@@ -22,6 +22,8 @@ You can customize multiple params. See next table.
 | `SWAP_MEMORY` 	| The amount of memory this container is allowed to swap to disk      	| `6gb`                                        	|
 | `CPUS`        	| Specify how much of the available CPU resources a container can use 	| `2`                                          	|
 
+>Note: Swap memory is equal to $SWAP_MEMORY - $MEMORY. Using the default values, the swap memory is 2g.
+
 
 ## Start miner
 You can start the miner with the default values
