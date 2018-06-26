@@ -32,4 +32,4 @@ start: build
 	--networkid 3 --testnet --rpc --rpcaddr "0.0.0.0" --mine --etherbase $(ETHER_ADDR) --fast
 
 shell:
-	docker exec -it ropsten-miner geth attach
+	docker exec -it ropsten-miner geth --datadir=/root/.ethereum/testnet attach
