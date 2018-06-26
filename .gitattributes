@@ -1,0 +1,4 @@
+* text=auto
+
+Makefile eol=lf
+*.sh eol=lf
