@@ -26,6 +26,15 @@ You can customize multiple params. See next table.
 
 >Note: Swap memory is equal to `$SWAP_MEMORY` - `$MEMORY`. Using the default values, the swap memory is 2g.
 
+## Tasks
+You can execute these tasks:
+
+| **Name** 	| **Description**                       	|
+|----------	|---------------------------------------	|
+| `build`  	| Pull the Docker image                 	|
+| `start`  	| Start the node in the Ropsten network 	|
+| `shell`  	| Open an interactive Geth console      	|
+
 
 ## Start miner
 You can start the miner with the default values
