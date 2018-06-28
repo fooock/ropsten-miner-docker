@@ -29,7 +29,8 @@ start: build
 	--memory=$(MEMORY) --memory-swap=$(SWAP_MEMORY) --memory-swappiness=80 --oom-kill-disable \
 	--cpus=$(CPUS) \
 	-v $$HOME/ropsten-miner/data:/root/.ethereum ethereum/client-go \
-	--syncmode "fast" --networkid 3 --testnet --rpc --rpcaddr "0.0.0.0" --mine --etherbase $(ETHER_ADDR)
+	--syncmode "fast" --networkid 3 --testnet --rpc --rpcaddr "0.0.0.0" --mine --etherbase $(ETHER_ADDR) \
+	--rpcapi admin,db,eth,debug,miner,net,shh,txpool,personal,web3
 
 shell:
 	docker exec -it ropsten-miner geth --datadir=/root/.ethereum/testnet attach
