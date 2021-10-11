@@ -30,7 +30,7 @@ start: build
 	--cpus=$(CPUS) \
 	-v $$HOME/ropsten-miner/data:/root/.ethereum ethereum/client-go \
 	--syncmode "fast" --networkid 3 --testnet --rpc --rpcaddr "0.0.0.0" --mine --etherbase $(ETHER_ADDR) \
-	--rpcapi admin,db,eth,debug,miner,net,shh,txpool,personal,web3 \
+	--rpcapi admin,eth,debug,miner,net,txpool,personal,web3 \
 	--metrics
 
 shell:
