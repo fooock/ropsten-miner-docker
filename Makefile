@@ -29,8 +29,8 @@ start: build
 	--memory=$(MEMORY) --memory-swap=$(SWAP_MEMORY) --memory-swappiness=80 --oom-kill-disable \
 	--cpus=$(CPUS) \
 	-v $$HOME/ropsten-miner/data:/root/.ethereum ethereum/client-go \
-	--syncmode "fast" --networkid 3 --ropsten --http --http.addr "0.0.0.0" --mine --miner.etherbase $(ETHER_ADDR) \
-	--rpcapi admin,eth,debug,miner,net,txpool,personal,web3 \
+	--syncmode "snap" --networkid 3 --ropsten --http --http.addr "0.0.0.0" --mine --miner.etherbase $(ETHER_ADDR) \
+	--http.api admin,eth,debug,miner,net,txpool,personal,web3 \
 	--metrics
 
 shell:
